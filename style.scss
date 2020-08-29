@@ -33,7 +33,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-   
+}   
 
 
 .header__left,
@@ -49,8 +49,12 @@ a {
 }
 
 .header__cart {
-    margin-right: 26px;
+    margin-right: 26px; 
 }
+.header__cart:hover{
+    width: 35px;
+} 
+
 .header_browse{
   font-size: 14px;
   font-weight: 300;
@@ -59,6 +63,15 @@ a {
   letter-spacing: 0.03em;
   line-height: 32px;
 }
+.my_account{
+  line-height: 32px;
+  padding-left: 19px;
+  padding-right: 19px;
+  text-align: right;
+  font-size: 15px;
+}
+.my_account:hover{
+  color:grey;
 }
 .logo {
     display: flex;
@@ -70,11 +83,11 @@ a {
     letter-spacing: 0.03em;
     line-height: 32px;
     text-transform: uppercase;
-
+}
 .logo__img {
     margin-right: 13px;
 }
-}
+
 .brand{
    font-size: 27px;
     font-weight: 900;
@@ -85,7 +98,7 @@ a {
     text-transform: uppercase;
 }
 
-/** {box-sizing: border-box;}*/
+
 form {
   padding-left: 30px;
   position: relative;
@@ -100,6 +113,11 @@ form {
   padding: 8px 11px;
   font-size: 16px;
   border: none;
+  outline: none;
+   
+}
+.dropbtn:hover{
+  color:$colorActive;
 }
 .dropdown {
   display: inline-block;
@@ -108,9 +126,12 @@ form {
   font-weight: 300;
   border: 1px solid #ddd;
   border-right: none;
-  background-color: rgb(239, 239, 239);
+  background-color: white;
   position: relative;
   }
+  .dropdown:hover{
+    background-color:#efefef; 
+  }  
   
 .dropdown-content {
   padding:20px; 
@@ -129,9 +150,13 @@ form {
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+  display: block;
 }
-
+input{
+  text-indent: 20px;
+  padding-right: 30px;
+  outline: none;
+}
 .search_bar {
     position: relative;
     width: 520px;
@@ -159,6 +184,7 @@ form {
     border-left: none;
     cursor: pointer;
     color: rgba(137, 137, 137, 1);
+    outline: none;
 }
 
 .search_bar .search-container button:hover {
@@ -177,18 +203,15 @@ form {
     display: flex;
     justify-content: center;
     list-style: none;
-
-    &__list{
+}
+.menu__list{
         position:relative;
-        &:hover .drop{
+}
+.menu__list:hover .drop{
             display: flex;
-            z-index: 1;
-            
-        }
-       
-    }
-
-
+            z-index: 1;    
+}   
+         
 .menu__link {
     padding: 20px;
     display: block;
@@ -196,10 +219,9 @@ form {
     font-weight: bold;
     color: #222222;
     line-height: 26px;
-    text-transform: uppercase;
-   
+    text-transform: uppercase;  
 }
-}
+
 .drop{
     padding:20px;
     background-color: #ffffff;
@@ -209,7 +231,7 @@ form {
     border: 1px solid #e8e8e8;
     display: none;
    
-    &::after{
+      &::after{
         content:'';
         width: 12px;
         height: 12px;
@@ -221,14 +243,17 @@ form {
         transform:rotate(45deg);
         border-top: 1px solid #e8e8e8;
         border-left: 1px solid #e8e8e8;
-    }
-    &_last{
-        right:0;
-        &::after{
-            left:auto;
-            right:53px;
-        }
-    }
+      }
+
+          &_last{
+              right:0;
+               &::after{
+                  left:auto;
+                  right:53px;
+               }
+           }
+
+
     &_h3{
         font-size: 14px;
         font-weight: normal;
@@ -244,22 +269,23 @@ form {
     &_col{
         width: 234px;
         &:not(:last-child){
-            margin-right: 46px;;
+            margin-right: 46px;
         }
     }
     
     &_ul{
         list-style-type: none;
     }
+
     &_link{
         font-size: 14px;
         color: rgba(79, 79, 79, 1);
         text-align: right;
         letter-spacing: 0.03em;
         line-height: 28px; 
-        &:hover{
+          &:hover{
             color:$colorActive;
-        }
+          }
     }
     
 }
@@ -295,7 +321,7 @@ form {
     line-height: 46px;
     margin-bottom: 12px;
 }
-.f{
+.span_fashions{
   font-size: 40px;
   font-weight: 900;
   color: rgba(241, 109, 127, 1);
@@ -381,10 +407,10 @@ form {
 }
 .low_title {
   font-size: 30px;
-font-weight: 900;
-color: rgba(241, 109, 127, 1);
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(241, 109, 127, 1);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   }
 
 
@@ -473,15 +499,12 @@ text-transform: uppercase;
 .button-pink {
     background-color: $colorActive;
     color: #ffffff;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03em;     
 }
-.my_account{
-    line-height: 32px;
-    padding-left: 19px;
-    padding-right: 19px;
-    text-align: right;
-    font-size: 15px;
+.button-pink:hover{
+  color:grey;
 }
+
 .browse_all_product{
     width: 100%;
     text-align: center;
@@ -558,14 +581,16 @@ text-transform: uppercase;
 }
 .sale_text h3 {
   margin-bottom: 10px;
-  &:hover{
+
+    &:hover{
       color:pink;
-  }
+    }
 }
 .sale_text p {
   line-height: 30px;
-  &:hover{
-    color:pink;
+
+     &:hover{
+     color:pink;
 }
 }
 /*-------single page---------------*/
@@ -574,47 +599,51 @@ text-transform: uppercase;
     background-image: url(img/girl.png);
     background-repeat: no-repeat;
     background-position: center 0px;
-    background-color: hsl(180, 30%, 96%);  /*?*/
+    background-color: hsl(180, 30%, 96%); 
     position: relative;
-    z-index: -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
-
-
-.arrow-side{
+.arrow_side {
   height: 47px;
   width: 47px;
-  background-color: #2a2a2a, 0.15;
+  color:white;
+  background-color: rgb(215, 208, 208);
+  border:none; 
 }
-
+.arrow_side:hover {
+  color: grey;
+  background-color: rgb(215, 208, 208);
+}
 .single_page_box{
      height: 730px;
      background-color: #ffffff;
      border: 1px solid #eaeaea;
      text-align: center;
-     z-index: 1 ;
-     margin-top: -100px;
-
+     /*z-index: 1 ;*/
+     margin-top: -90px;
+     position: relative;
+}
 
 .single_page_title1{
     padding-top:30px;
     height: 10px;
+    /*width: 147px;*/
     font-size: 14px;
     font-weight: bold;
-    color: rgba(241, 109, 127, 1);
+    color: #f16d7f; 
     text-align:center ;
     line-height: 24px;
-    &:hover{
-       text-decoration: underline;
-       color:$colorActive;
-    }
- 
+    padding-bottom: 20px;
+   
 }
+
+
+ 
 .single_page_title2{
-    padding-top: 45px;
+    padding-top: 10px;
     height: 14px;
     font-family: 'Lato';
     font-size: 18px;
@@ -626,12 +655,11 @@ text-transform: uppercase;
 }
 
 .single_page_text{
-  padding-top: 90px;
+  padding-top: 70px;
   height: 130px;
-  font-family: 'Lato';
   font-size: 14px;
   font-weight: 300;
-  color: rgba(94, 94, 94, 1);
+  color: #5e5e5e;
   text-align: center;
   line-height: 24px;
 }
@@ -646,9 +674,8 @@ text-transform: uppercase;
     line-height: 24px;
 }
 
-}
 .two_titles{
-  padding-top: 75px;
+  padding-top: 35px;
   display: flex;
   justify-content: center;
 }
@@ -669,47 +696,37 @@ text-transform: uppercase;
   text-align: center;
   line-height: 24px;
 }
-.you{
-    padding-top: 100px;;
-    height: 18px;
-    font-size: 24px;
-    font-weight: 900;
-    color: rgba(77, 77, 77, 1);
-    text-align: center;
-    line-height: 20px;
-    text-transform: uppercase;
+.underprice{
+  padding-top: 80px; 
 }
-.choose_table{
-    display: flex;
-    padding-top: 20px;;   
-}
-.choose{
-    height: 12px;
-    font-family: 'Lato';
-    font-size: 14px;
-    font-weight: bold;
-    color: #2f2f2f;
-    text-align: center;
-    line-height: 24px; 
-}
+
 .table{
-    padding-top: 120px;  
-}
-.row{
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 50px;   
 }
-.column {
+
+.choose_row{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+.choose_column {
     position: relative;
     float: left;
-    width: 179px;
+    /*width: 179px;*/
     background-color: #ffffff;
     margin-right: 40px;   
 }
-.p_title{
+.choose_title{
     text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #2f2f2f;
+    line-height: 24px;
 }
-.p_border{
+.choose_border{
     text-align: left;
     float: left;
     height: 35px;
@@ -721,19 +738,30 @@ text-transform: uppercase;
 }
 
 .add_to_cart{
-    margin-top: 50px;
-    margin-left: 262px;
+    margin-top: 40px;
     height: 55px;
-    width:537px;
+    width:517px;
     border: 1px solid $colorActive;
     display: flex;
     justify-content: center;
     align-items: center;
     color:$colorActive;
+    margin-left: 290px;
    
 }
 .a_cart{
-    margin-right: 40px;;
+    margin-right: 40px;
+}
+.title_you{
+  padding-top: 80px;
+  padding-bottom: 20px;
+  height: 18px;
+  font-size: 24px;
+  font-weight: 900;
+  color: rgba(77, 77, 77, 1);
+  text-align: center;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 .single_page_photos {
     padding-top: 60px;
@@ -741,7 +769,18 @@ text-transform: uppercase;
     display: flex;
     justify-content: space-between;
 } 
+.photo15{
+  height: 265px;
+  width: 86px; 
+  background-color: #e9e9e9;
+  margin-left: 75px;
+}
 
+.photo15_back{
+  height: 280px;
+  width: 261px;
+  background: #e9e9e9;
+}
 /*--------------catalog-------------*/
 
 .arrivals{
@@ -753,7 +792,6 @@ text-transform: uppercase;
   }
   .arrivals_heading{
     height: 18px;
-    font-family: 'Lato';
     font-size: 24px;
     font-weight: 900;
     color: rgba(241, 109, 127, 1);
@@ -788,9 +826,15 @@ text-transform: uppercase;
     line-height: 20px;
     text-transform: uppercase;  
   }
-  .upper_block{
+.upper_block{
     padding-top: 15px;
+  
   }
+
+.upper_block:hover {
+  box-shadow: none;
+}
+  
 
 .assortment_title{
     font-size: 14px;
@@ -808,6 +852,9 @@ text-transform: uppercase;
     padding-top: 10px;
     
   }
+.assortment_list:hover{
+    font-weight: bold;
+  }  
 .assortment_list:not(:last-child)::after{
     content:' | ';
 } 
@@ -816,6 +863,14 @@ text-transform: uppercase;
     border:none;
     text-align: left;
 } 
+.td_line_square{
+  color:#ebebeb;
+
+}
+.td_line_square:hover{
+  color:grey;
+}
+
 .assort_price{
     margin-right: 50px;
     padding-top: 20px;
@@ -829,11 +884,14 @@ text-transform: uppercase;
    align-items: center;
    height: 50px;
    width: 846px;
-   background-color: #f3f3f3;
-   
-   
+   background-color: #f3f3f3;  
 }
-.drop_title{
+
+.drop_window:hover{
+  box-shadow: none;
+}
+
+/*.drop_title{
   height: 12px;
   width: 45px;
   font-family: 'Lato';
@@ -841,13 +899,47 @@ text-transform: uppercase;
   color: #6f6e6e;
   line-height: 26px;
   margin-left: 10px;
-
   border:1px solid white;
   background: white;
   height: 30px;
   width: 153px; 
 
+  }*/
+
+  .dropdown1 {
+    display: inline-block;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    border-right: 1px solid #ddd;
+    background-color: #efefef;
+    position: relative;
+    margin-bottom: 5px;
+    }
+    .dropdown2 {
+    display: inline-block;
+    height: 30px;
+    font-size: 14px;
+    font-weight: 300;
+    /* border-right: 1px solid #ddd;
+    background-color: white;*/
+    position: relative;
+    margin-bottom: 5px;
   }
+
+  .dropdown_right, .dropdown_left{
+    background: white;
+    margin-left: 20px;
+    
+
+  }
+ 
+.dropdown_right1, .dropdown_left1{
+    background: white;
+    
+  
+  
+}  
 .sort{
     width: $widthSort;
     margin-right: 49px;
@@ -879,8 +971,9 @@ details.details_menu_item {
   /*transition: 0.4s;*/
 }
 
-details_menu_item{
+.details_menu_item{
   color: rgba(241, 109, 127, 1);
+  outline: none;
 }
 
 .catalog_content{
@@ -892,6 +985,7 @@ details_menu_item{
     color: rgba(239, 91, 112, 1);
     line-height: 20px;
     text-transform: uppercase;
+    outline: none;
 }
 .catalog_title_arrow{
   padding-left: 80px;;
@@ -908,6 +1002,7 @@ details_menu_item{
     color: #6f6e6e;
     line-height: 20px;
     text-transform: uppercase;
+    outline: none;
    
 }
 
@@ -917,6 +1012,7 @@ details_menu_item{
     color: #6f6e6e;
     line-height: 20px;
     text-transform: uppercase;
+    outline: none;
 }   
   
 .catalog_content .product-box {
@@ -932,6 +1028,7 @@ details_menu_item{
     background-color: rgba(255, 255, 255, 1);
     border: 1px solid rgba(235, 235, 235, 1);
     border-radius: 3px;
+    padding-top: 5px;
 }
 .first{
     height: 12px;
@@ -954,10 +1051,10 @@ details_menu_item{
   width: 150px;
   border: 1px solid rgba(239, 91, 112, 1);
   text-align: center;
+  padding-top: 5px;
 
 }
 .view_all{
-
   height: 13px;
   width: 58px;
   font-family: 'Lato';
@@ -966,6 +1063,7 @@ details_menu_item{
   color: rgba(239, 91, 112, 1);
   line-height: 26px;
   text-align: center;
+  
 }
 
 /*-------------checkout-----------------*/
@@ -1022,7 +1120,7 @@ details_menu_item{
     color: #222222;
     text-align: left;
     text-transform: uppercase;
-
+    
 }
 .checkout_small2{
     font-size: 13px;
@@ -1046,6 +1144,10 @@ details_menu_item{
     width: 180px;
     text-align: center;
     padding-top: 2px;
+      
+}
+.checkout_p3:hover{
+  color:$colorActive;
 }
 .checkout_p4{
     font-size: 12px;
@@ -1074,20 +1176,24 @@ details_menu_item{
 }
 .checkout_last{
     display: flex;
-    padding-top: 15px;
+    padding-top: 4px;
 }
 /*  -------------shopping cart-------*/
 
 
 td{
-  /*border:1px solid black;*/
-  width:200px;
+  border:1px solid black;
+  width:130px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  
+}
+.table_shopping_cart{
+  margin-top: 20px;
 }
 .table_cart{
-    /*border:1px solid black;*/
+    border:1px solid black;
     height: 115px;
     width: 1140px;
      
@@ -1132,23 +1238,39 @@ td{
     text-transform: uppercase;
     font-weight: bold;
     height: 11px;
-    width: 157px;
+   /* width: 157px;*/
       
 }
+
 .table_info1{
     font-weight: 400;
     font-size: 13px;
+    font-weight: 400;
     color: #575757;
     line-height: 20px;
-    padding-top: 20px;
+    padding-top: 0px;
     text-align: left;
 }
+.table_info1_up{
+  font-weight: 400;
+  font-size: 13px;
+  font-weight: 400;
+  color: #575757;
+  line-height: 20px;
+  padding-top: 20px;
+  text-align: left;
+}
+
 .table_info2{
     font-size: 13px;
     font-weight: 300;
     color: #6f6e6e;
     line-height: 20px;
     text-align: left;
+
+    &:hover{
+      font-weight: bold;
+    }
 }
 .table_price{
     font-size: 13px;
@@ -1156,12 +1278,20 @@ td{
     line-height: 20px;   
 }
 .table_number{
-    /*height: 30px;
-    width: 54px;*/
-    background-color: #ffffff;
     border: 1px solid #eaeaea;
+    height: 30px;
+    width: 54px;
+   /* background-color: #ffffff;*/   
 }
-
+.table_number a:hover{
+   color:$colorActive;
+}
+.table_action a{
+    color:#c0c0c0;
+}
+.table_action a:hover{
+  color:$colorActive;
+}
 .shopping{
     display: flex;
     justify-content: space-between;
@@ -1171,13 +1301,16 @@ td{
 .shopping_title{
     font-size: 14px;
     font-weight: bold;
-    color: #4a4a4a;
+    color:#4a4a4a;
     text-transform: uppercase;
     height: 50px;
     width: 225px;
     border:1px solid black;
     text-align: center;
     padding-top: 15px;
+}
+.shopping_title:hover{
+  color:$colorActive;
 }
 .client{
     display: flex;
@@ -1203,7 +1336,9 @@ td{
     margin-bottom: 20px;
     margin-top: 20px;
     text-indent: 20px;
+    outline: none;
 }
+
 .quote{
     font-size: 11px;
     font-weight: bold;
@@ -1217,6 +1352,10 @@ td{
     padding-top: 10px;
    } 
 
+.quote:hover{
+    color:$colorActive;
+   }
+
 .coupon{
     font-size: 11px;
     font-weight: bold;
@@ -1228,6 +1367,9 @@ td{
     margin-top: 50px;
     text-align: center;
     padding-top: 10px;;
+}
+.coupon:hover{
+  color:$colorActive;
 }
 .p_coupon{
     margin-top: 50px;
@@ -1270,9 +1412,12 @@ td{
     width: 273px;
     background-color: #f16d7f;
     margin: 40px;
-    border:none;
-   
+    border:none;  
 }
+.total_3:hover{
+color:grey;
+}
+
 /*------------footer-1 ----------------*/
 .black_footer{
   margin-top: 50px;
@@ -1358,8 +1503,6 @@ td{
     width: 400px;
     border-radius: 23px;
     background-color: rgba(225, 225, 225, 1);
-    
-  
   
   }
   .scribe{
@@ -1368,7 +1511,8 @@ td{
     border:none;
     border-radius: 0 23px 23px 0;
     width: 150px;
-   &:hover{
+    outline: none;
+       &:hover{
        color:#ccc;
    }
   }
@@ -1444,7 +1588,6 @@ td{
     height: 32px;
     width: 32px;
     background-color: #fff;
-  
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1467,7 +1610,6 @@ td{
     font-size: 18px;
     font-weight: bold;
     color: rgba(241, 109, 127, 1);
-  
     letter-spacing: 0.03em;
     line-height: 26px;
   }
@@ -1490,11 +1632,9 @@ td{
     text-align: left;
     letter-spacing: 0.03em;
     line-height: 42px;
-    &:hover{
-        color:$colorActive;
-    }
+      
   }
-
-
-
+  .info__link:hover{
+    color:$colorActive;
+  }
 
